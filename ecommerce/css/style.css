@@ -1,0 +1,202 @@
+/* General Body and Layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #0044cc, #00aaff);
+    color: #f0f8ff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #002855, #005f99);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    animation: floatHeader 2s infinite alternate;
+}
+
+@keyframes floatHeader {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(5px); }
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px rgba(0, 255, 255, 0.7);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a, .logout-button {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+nav a:hover, .logout-button:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+/* Floating Logout Button */
+.logout-button {
+    background-color: #0074cc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.logout-button:hover {
+    background-color: #00c3ff;
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Cart Link - Floating Animation */
+.cart-link {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+    animation: cartBounce 2s infinite alternate;
+}
+
+@keyframes cartBounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
+
+.cart-link:hover {
+    color: #00f7ff;
+    transform: scale(1.2);
+}
+
+.cart-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+}
+
+/* Main Container */
+.main-container {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Product Listing */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    width: 90%;
+}
+
+/* Product Cards */
+.product {
+    background: linear-gradient(120deg, #0057d9, #00c3ff);
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    text-align: center;
+    width: 25%;
+    transition: transform 0.4s ease-in-out;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.product:hover {
+    transform: rotate(-3deg) scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.5);
+}
+
+.product h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.product p {
+    font-size: 1.1em;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+/* Product Image */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 15px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-image:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* Animated Add to Cart Button */
+.add-to-cart-button {
+    background: linear-gradient(45deg, #00aaff, #0033cc);
+    color: white;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-weight: bold;
+    box-shadow: 0px 6px 12px rgba(0, 0, 255, 0.3);
+}
+
+.add-to-cart-button:hover {
+    background: linear-gradient(45deg, #0077ff, #00e1ff);
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0px 8px 15px rgba(0, 255, 255, 0.5);
+}
+
+/* Footer */
+footer 
